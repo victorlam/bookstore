@@ -1,27 +1,13 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms"; // <-- NgModel lives here
 
-import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import {
-  MatButtonModule,
-  MatCheckboxModule,
-  MatToolbar
-} from "@angular/material";
+import { HomeComponent } from "./home/home.component";
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatCheckboxModule,
-    MatToolbar
-  ],
-  exports: [MatButtonModule, MatCheckboxModule, MatToolbar],
+  declarations: [AppComponent, HomeComponent],
+  imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
